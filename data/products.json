@@ -28,10 +28,10 @@
     "price": 249.56
   },
   {
-    "id": 5,
-    "name": "new product",
-    "description": "the newest product we currently carry",
-    "category": "i dont even know",
-    "price": 15.29
+    "id": "5",
+    "name": "changed new product",
+    "description": "changed newest product we currently carry",
+    "category": "changed to books",
+    "price": 1000000000
   }
 ]

@@ -29,3 +29,11 @@ app.post('/api/products', (req, res) => {
   const addedProduct = repoContext.products.createProduct(newProduct)
   return res.send(addedProduct)
 })
+
+
+app.put('/api/products/:id', (req, res) => {
+  const id = req.params.id
+  const productPropertiesToUpdate = req.body
+  const updatedProduct = repoContext.products.updateProduct(id, productPropertiesToUpdate)
+  return res.send(updatedProduct)
+})
