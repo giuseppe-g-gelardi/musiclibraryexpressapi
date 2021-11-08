@@ -47,9 +47,9 @@ app.get('/api/songs/:id', (req, res) => {
 //   return res.send(addedProduct)
 // })
 
-app.post('/api/songs', [validateSong], (req, res) => {
+app.post('/api/songs', (req, res) => {
   const newSong = req.body
-  const addedSong = repoContext.songs.createProduct(newSong)
+  const addedSong = repoContext.songs.createSong(newSong)
   return res.send(addedSong)
 })
 
@@ -60,7 +60,7 @@ app.post('/api/songs', [validateSong], (req, res) => {
 //   return res.send(updatedProduct)
 // })
 
-app.put('/api/songs/:id', [validateSong], (req, res) => {
+app.put('/api/songs/:id', (req, res) => {
   const id = req.params.id
   const productPropertiesToUpdate = req.body
   const updatedSong = repoContext.songs.updateSong(id, productPropertiesToUpdate)
@@ -78,6 +78,6 @@ app.put('/api/songs/:id', [validateSong], (req, res) => {
 
 app.delete('/api/songs/:id', (req, res) => {
   const id = req.params.id
-  const updatedDataSet = repoContext.songs.deleteProduct(id)
+  const updatedDataSet = repoContext.songs.deleteSong(id)
   return res.send(updatedDataSet)
 })
