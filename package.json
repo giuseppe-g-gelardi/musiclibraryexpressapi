@@ -4,6 +4,7 @@
   "description": "node/express api for react music library project for dCC mern class",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
